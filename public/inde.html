@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..900&family=Ovo&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="overflow-x-hidden leading-8 font-Outfit text-black  dark:bg-darkTheme dark:text-white">
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[80%] dark:hidden">
+        <img src="images/bg.png" alt="" class="w-full">
+    </div>
+
+    <nav class="w-full fixed px-5 xl:px-[8%] py-4 flex items-center justify-between bg-white bg-opacity-50 z-50 dark:bg-opacity-75">
+        <img src="/images/logo5.png" alt="logo" class="w-20 cursor-pointer mr-14">
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white text-black font-Ovo shadow-sm bg-opacity-50 dark:bg-opacity-75 dark:text-white">
+            <li><a href="#Home" class="hover:border-b-green bg-white border-b border-black-500 size-12 bg-opacity-50">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Service">Service</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="flex items-center justify-end gap-4">
+            <!-- Toggle Switch -->
+            <div class="relative inline-block w-10 h-6">
+                <input type="checkbox" id="toggle" class="sr-only peer" onclick="toggleDarkMode()">
+                <label for="toggle" class="block bg-gray-300 dark:bg-gray-600 w-full h-full rounded-full cursor-pointer transition-all"></label>
+                <div class="toggle-dot absolute top-0.5 right-0.5 w-5 h-5 bg-white rounded-full transition-transform peer-checked:-translate-x-4 duration-300 ease-in-out"></div>
+            </div>
+            <!-- Contact Link (Visible only on large screens) -->
+            <a href="contact" class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4">
+                Contact
+                <img src="/images/arrow icon.jpg" class="w-4" alt="">
+            </a>
+
+            <!-- Menu Button (Visible only on small screens) -->
+            <button class="block lg:hidden ml-4" onclick="openMenu()">
+                <img src="images/menu icon.png" alt="" class="w-6">
+            </button>
+        </div>
+    </nav>
+
+    <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-black text-white transition duration-500">
+        <div class="absolute right-6 top-6" onclick="closeMenu()"> 
+            <img src="images/close.png" alt="" class="w-8 cursor-pointer">
+        </div>
+        <li><a href="#home" onclick="closeMenu()" class="text-zinc-950">Home</a></li>
+        <li><a href="#About" onclick="closeMenu()">About</a></li>
+        <li><a href="#Service" onclick="closeMenu()">Services</a></li>
+        <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+    </ul>
+
+  
+    <div id="font" class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+        <img src="/images/profile.png" alt="" class="rounded-full w-32">
+        <h3 class="flex justify-center font-semibold text-xl gap-2 md:text-2xl mb-3">
+            Hi! I'm Michael Adejimi <img src="/images/hand.png" alt="" class="w-6" ></h3>
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px]"> Frontend Web Developer Based In Nigeria.</h1>
+        <p class="max-w-2xl mx-auto fonts-Ovo">Lorem ipsum dolor 
+            sit amet consectetur adipisicing elit. Sint, dicta! Atque praesentium!</p>
+            <div class="flex flex-col sm:flex-row gap-4 mt-3 align-center">
+                <a href="#Contact Me" 
+                class="px-10 py-3 border rounded-full bg-black text-white flex items center gap-2 hover:bg-green-900 ">Contact Me</a>
+
+                <a href="images/profile.png" download 
+                class="px-10 py-3 border border-gray-700 rounded-full text-green-800 flex items center gap-2 hover:bg-black  ">My Resume<img src="/images/download.png" alt="" class="w-6"></a>
+            </div>    
+    </div>
+
+    <div id="About" class="w-full px-[12%] py-10 scroll-mt-20 font-Ovo" >
+        <h3 class="text-center text-lg">Introduction</h3>
+        <h1 class="text-center text-3xl">About me</h1>
+        <div class="flex flex-col lg:flex-row items-center gap-20 mt-10">
+            <div class="max-w-max mx-auto relative">
+                <img src="images/about3.png" alt="About image" class="w-64 sm:w-80 rounded-3xl">    
+                <div class="bg-white w-1/2 aspect-square absolute right-0 bottom-20 rounded-full translate-x-1/4 translate-y-1/3 shadow-gray-500 
+                flex items-center justify-center border-[0.5px] hover:-translate-y-2 duration-500 cursor-pointer "> <img src="/images/circular2.png" alt="" class="w-30"> 
+                </div>    
+            </div>   
+            <div class="flex-1">
+                <p class="mb-10 max-w-2xl">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum assumenda mollitia earum maiores consectetur velit aliquam ipsum harum similique necessitatibus.
+                </p>
+
+                <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                    <li class="border-[0.5px] border-gray-700 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-black">
+                        <img src="images/code icon.png" alt="Code icon" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">Languages</h3>
+                        <p>HTML, CSS, JavaScript, React, C++, C#, Java</p>
+                    </li>
+                    <li class="border-[0.5px] border-gray-700 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-black">
+                        <img src="images/eudcation.png" alt="Education icon" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">Education</h3>
+                        <p>B.Sc in Computer Tech, CompTIA Network Security Certification</p>
+                    </li>
+                    <li class="border-[0.5px] border-gray-700 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500 hover:shadow-black">
+                        <img src="images/projects.png" alt="Projects icon" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">Projects</h3>
+                        <p>Built 10 Projects</p>
+                    </li>
+                </ul>
+                <h4 class="my-6 text-gray-700 font-Ovo">Tools I Use</h4>
+                <ul class="flex items-center gap-3 sm:gap-5">
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border-[0.5px] border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 transition duration-500">
+                        <img src="images/vscode.png" alt="VS Code icon" class="w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border-[0.5px] border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 transition duration-500">
+                        <img src="images/vscode.png" alt="VS Code icon" class="w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border-[0.5px] border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 transition duration-500">
+                        <img src="images/vscode.png" alt="VS Code icon" class="w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border-[0.5px] border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 transition duration-500">
+                        <img src="images/vscode.png" alt="VS Code icon" class="w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border-[0.5px] border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 transition duration-500">
+                        <img src="images/vscode.png" alt="VS Code icon" class="w-7">
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page content continues here -->
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        const sideMenu = document.querySelector ('#sideMenu');
+const navBar = document.querySelector ("nav");
+const navLinks = document.querySelector ("nav a");
+const nav_Links = document.querySelectorAll('nav a');
+
+
+
+function openMenu(){
+    sideMenu.style.transform = 'translateX(-16rem)'
+}
+
+function closeMenu(){
+    sideMenu.style.transform = 'translateX(16rem)'
+}
+
+window.addEventListener ('scroll', ()=>{
+    if(scrollY > 50){
+        navBar.classList.add ('bg-white', 'bg-opacity-40', 'backdrop-blur-lg', 'shadow-sm', 'py-4');
+        navLinks.classList.remove ('bg-white', 'shadow-sm', 'bg-opacity-50' )  
+    }else{
+        navBar.classList.remove ('scrolled bg-white', 'bg-opacity-50', 'backdrop-blur-lg', 'shadow-sm');
+        navLinks.classList.add ('bg-white', 'shadow-sm', 'bg-opacity-50')  
+    }
+})
+        function toggleDarkMode() {
+            const htmlElement = document.documentElement;
+            const isDarkModeEnabled = htmlElement.classList.toggle('dark');
+            localStorage.setItem('dark-mode', isDarkModeEnabled);
+            
+            // Update text color based on mode
+            document.body.style.color = isDarkModeEnabled ? 'white' : 'black';
+
+            nav_Links.forEach(link => {
+                link.style.color = isDarkModeEnabled ? 'white' : 'black';
+            })
+
+        }
+
+        // Apply stored dark mode preference on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const storedDarkMode = localStorage.getItem('dark-mode') === 'true';
+            if (storedDarkMode) {
+                document.documentElement.classList.add('dark');
+                document.getElementById('toggle').checked = true;
+                document.body.style.color = 'white';  // Set text color for dark mode
+            } else {
+                document.body.style.color = 'black';  // Set text color for light mode
+            }
+        });
+    </script>
+</body>
+</html>

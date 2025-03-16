@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..900&family=Ovo&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="overflow-x-hidden leading-8 font-Outfit text-black  dark:bg-darkTheme dark:text-white">
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[80%] dark:hidden">
+        <img src="images/bg.png" alt="" class="w-full">
+    </div>
+
+    <nav class="w-full fixed px-5 xl:px-[8%] py-4 flex items-center justify-between bg-white bg-opacity-50 z-50 dark:bg-opacity-75">
+        <img id="lightLogo" src="images/lgo2.png" alt="logo" class="max-w-20 cursor-pointer mr-14 ">
+       <img id="darkLogo" src="images/lgo3.png" alt="logo" class="max-w-20 cursor-pointer mr-14 hidden">
+
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white text-black font-Ovo shadow-sm bg-opacity-50 dark:bg-opacity-75 dark:text-white
+        dark:border dark:border-white/50 dark:bg-transparent">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Service">Service</a></li>
+            <li><a href="#mywork">MyWork</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+<div class="flex items-center justify-end gap-4">
+    <!-- Toggle Switch -->
+    <div class="relative inline-block w-10 h-6">
+        <input type="checkbox" id="toggle" class="sr-only peer" onclick="toggleDarkMode()">
+        <label for="toggle" class="block bg-gray-300 dark:bg-gray-600 w-full h-full rounded-full cursor-pointer transition-all"></label>
+        <div class="toggle-dot absolute top-0.5 right-0.5 w-5 h-5 bg-white rounded-full transition-transform peer-checked:-translate-x-4 duration-300 ease-in-out"></div>
+    </div>
+    
+    <!-- Contact Link (Visible only on large screens) -->
+    <a href="contact" class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo">
+        Contact
+        <img id="lightarrow" src="images/arrow right.png"  class="w-4" alt="">
+        <img id="darkarrow" src="images/white.png" class="w-4" alt="">
+    </a>
+
+    <!-- Menu Button (Visible only on small screens) -->
+    <button class="block lg:hidden md:hidden ml-4" onclick="openMenu()">
+        <img id="lightside" src="images/menu icon.png" alt="" class="w-6">
+        <img id="darkside" src="images/sidemenu2.png" alt="" class="w-6 hidden">
+    </button>
+</div>
+</nav> 
+
+<ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0
+bottom-0 w-64 z-50 h-screen bg-[#10214c] font-Ovo text-white transiton duration-500">
+
+<div class="absolute right-6 top-6" onclick="closeMenu()"> 
+    <img src="images/close.png" alt="" class="w-8 cursor-pointer" >
+</div>
+    <li><a href="#home" onclick="closeMenu()"> Home</a></li>
+    <li><a href="#About" onclick="closeMenu()"> About</a></li>
+    <li><a href="#Service" onclick="closeMenu()">Services</a></li>
+    <li><a href="#mywork" onclick="closeMenu()"> MyWork</a></li>
+    <li><a href="#contact" onclick="closeMenu()"> Contact</a></li>
+</ul>
+
+
+    <div id="home" class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 font-Ovo">
+        <img src="images/profile.png" alt="" class="rounded-full w-32 mt-40 sm:mt-32 md:mt-20">
+        <h3 class="flex justify-center font-semibold text-xl gap-2 md:text-2xl mb-3">
+            Hi! I'm Michael Adejimi <img src="images/hand.png" alt="" class="w-6" ></h3>
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px]"> Frontend Web Developer Based In Nigeria.</h1>
+        <p class="max-w-2xl mx-auto fonts-Ovo">I specialize in building responsive, high-performance websites and web applications using modern technologies like JavaScript, React, and Tailwind CSS.</p>
+            <div class="flex flex-col sm:flex-row gap-4 mt-3 align-center">
+                <a href="#Contact Me" 
+                class="px-10 py-3 border rounded-full bg-black text-white flex items center gap-2 hover:bg-green-900 ">Contact Me</a>
+
+                <a href="images/Michaels C.V 2.pdf" download 
+                class="px-10 py-3 border border-gray-700 rounded-full bg-white text-black flex items center gap-2 hover:bg-green-950 duration-500 ease-in-out  ">My Resume<img src="images/download.png" alt="" class="w-6"></a>
+            </div>    
+    </div>
+
+    <div id="About" class="w-full px-[12%] py-10 scroll-mt-20 font-Ovo mt-4">
+        <h3 class="text-center text-lg">Introduction</h3>
+        <h1 class="text-center text-3xl">About me</h1>
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+            <div class="max-w-max mx-auto relative">
+                <img src="images/about3 (5).png" alt="About image" class="w-64 sm:w-80 rounded-3xl mx-auto mt-6">    
+                <div class="bg-white w-1/2 aspect-square absolute right-0 bottom-8 rounded-full translate-x-1/4 translate-y-1/3 shadow-gray-500 
+                flex items-center justify-center border-[0.5px] hover:-translate-y-2 duration-500 cursor-pointer ">  
+                    <img src="images/animate6.png" alt="" class="w-full absolute py-0 px-0 animate-spin_slow">
+                    <img src="images/devs.png" alt="" class="w-10 items-center justify-center absolute">
+                </div>    
+            </div>   
+            <div class="flex-1">
+                <p class="mb-3 max-w-2xl"> I’m a passionate software engineer specializing in building scalable, user-friendly web applications. With expertise in JavaScript, modern frameworks, and backend solutions, I turn ideas into high-performing digital products. Let’s build something great together! </p>
+                <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                    <li class="border border-gray-700 rounded-xl p-6 cursor-pointer hover:bg-blue-950 hover:-translate-y-1 duration-500 hover:shadow-black">
+                        <img id="lightcode" src="images/code icon.png" alt="Code icon" class="w-7 mt-3">
+                        <img id="darkcode" src="images/white code.png" alt="Code icon" class="w-7 mt-3 hidden">
+                        <h3 class="my-4 font-semibold">Languages</h3>
+                        <p>HTML, CSS, JavaScript, React, C++, C#, Java</p>
+                    </li>
+                    <li class="border border-gray-700 rounded-xl p-6 cursor-pointer hover:bg-blue-950 hover:-translate-y-1 duration-500 hover:shadow-black">
+                        <img id="lightedu" src="images/eudcation.png" alt="Education icon" class="w-7 mt-3">
+                        <img id="darkedu" src="images/education2.png" alt="Education icon" class="w-7 mt-3 hidden">
+                        <h3 class="my-4 font-semibold">Education</h3>
+                        <p>B.Sc in Computer Tech, CompTIA Network Security Certification</p>
+                    </li>
+                    <li class="border border-gray-700 rounded-xl p-6 cursor-pointer hover:bg-blue-950 hover:-translate-y-1 duration-500 hover:shadow-black dark:border-gray-300">
+                        <img id="lightproject" src="images/projects.png" alt="Projects icon" class="w-7 mt-3">
+                        <img id="darkproject" src="images/projects2.png" alt="Projects icon" class="w-7 mt-3 hidden">
+                        <h3 class="my-4 font-semibold">Projects</h3>
+                        <p>Built 10 Projects</p>
+                    </li>  
+                </ul>
+                <h4 class="my-6 text-gray-700 font-Ovo">Tools I Use</h4>
+                <ul class="flex flex-wrap items-center gap-3 sm:gap-5">
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 transition duration-500">
+                        <img src="images/vscode.png" alt="VS Code icon" class="w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 transition duration-500">
+                        <img src="images/c++.png" alt="C++ icon" class="w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 transition duration-500">
+                        <img src="images/java.png" alt="Java icon" class="w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 transition duration-500">
+                        <img src="images/javascript.png" alt="JavaScript icon" class="w-7">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 transition duration-500">
+                        <img src="images/react.png" alt="React icon" class="w-7">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="Service">
+        <div class="w-full px-[12] py-10 scroll-mt-20 font-Ovo">
+            <h3 class="text-center mb-2 text-lg ">What I Offer!</h3>
+        <h1 class="text-center text-3xl mb-0"> Services</h1>
+        <p class="w-full text-center justify-center mt-3"> Web Development, Mobile App Development, Network Security, Cyber Security</p>
+
+
+        <div class="grid grid-cols-auto my-10 gap-6 px-[12%] ">
+            <div class="border border-gray-400 rounded-lg px-8 py-7 hover:shadow-black cursor-pointer hover:bg-blue-950 hover:-translate-y-1 duration-500">
+                <img src="images/web icon.png" alt="" class="w-10">
+                <h3 class="my-4 font-semibold  text-lg">Web Design</h3>
+                <p class="text-sm  leading-5">I create modern, user-friendly, and responsive designs that enhance user experience and reflect your brand. My designs are clean, fast, and optimized for all devices, ensuring a seamless and engaging experience. Let’s bring your vision to life!</p>
+                <a href="#read more" class="flex text-sm items-center gap-2 mt-4">Read more <img src="/images/arrow-right.png" alt="" class="w-3"></a>
+            </div>
+            <div class="border border-gray-400 rounded-lg px-8 py-7 hover:shadow-black cursor-pointer hover:bg-blue-950 hover:-translate-y-1 duration-500">
+                <img src="images/mobile.png" alt="" class="w-10">
+                <h3 class="my-4 font-semibold  text-lg">Mobile Apps</h3>
+                <p class="text-sm  leading-5">Need a mobile app? I develop cross-platform mobile applications using technologies like React Native, ensuring high performance and smooth user interactions.</p>
+                <a href="#read more" class="flex text-sm items-center gap-2 mt-4">Read more <img src="/images/arrow-right.png" alt="" class="w-3"></a>
+            </div>
+            <div class="border border-gray-400 rounded-lg px-8 py-7 hover:shadow-black cursor-pointer hover:bg-blue-950 hover:-translate-y-1 duration-500">
+                <img src="images/web dev.png" alt="" class="w-10">
+                <h3 class="my-4 font-semibold  text-lg">Web Development</h3>
+                <p class="text-sm leading-5">I build fast, scalable, and user-friendly websites using HTML, CSS, JavaScript, React, and Tailwind CSS. Whether it’s a portfolio, eCommerce store, or corporate site, I ensure a seamless digital experience.</p>
+                <a href="#read more" class="flex text-sm items-center gap-2 mt-4">Read more <img src="/images/arrow-right.png" alt="" class="w-3"></a>
+            </div>
+            <div class="border border-gray-400 rounded-lg px-8 py-7 hover:shadow-black cursor-pointer hover:bg-blue-950 hover:-translate-y-1 duration-500">
+                <img src="images/network.png" alt="" class="w-10">
+                <h3 class="my-4 font-semibold  text-lg">networking</h3>
+                <p class="text-sm  leading-5">I help businesses secure their websites and applications by implementing best security practices, performing vulnerability assessments, and ensuring data protection.</p>
+                <a href="#read more" class="flex text-sm items-center gap-2 mt-4">Read more <img src="/images/arrow-right.png" alt="" class="w-3"></a>
+            </div>
+        </div>
+    </div>
+
+    <!---------work--------->
+
+ 
+        <div id="mywork" class="w-full px-[12%] py-10 scroll-mt-20 font-Ovo">
+            <h3 class="text-center mb-2 text-lg ">My Portfolio</h3>
+        <h1 class="text-center text-3xl mb-0"> My latest work</h1>
+        <p class="w-full text-center justify-center mt-3"> Web Development, Mobile App Development, Network Security, Cyber Security</p>
+
+        <div class="grid sm:grid-cols-auto lg:grid-cols-4 gap-5 px-[12]">
+            <div class="aspect-square rounded-lg relative cursor-pointer group overflow-hidden">
+                <!-- Video Element -->
+                <video autoplay muted loop class="w-full h-full object-cover">
+                    <source src="/mrnewprt/Local Service Marketplace.mp4 Service Marketplace.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            
+                <!-- Overlay Content -->
+                <div class="bg-white absolute h-16 rounded-md py-4 px-6 -translate-x-1/2 flex duration-500 items-center justify-between bottom-5 left-1/2 w-11/12 group-hover:bottom-7">
+                    <div class="flex flex-col">
+                        <h3 class="font-semibold text-gray-700 text-base leading-tight">GoTask</h3>
+                        <p class="text-sm text-gray-700 leading-tight">Local Task Management Platform</p>
+                    </div>  
+                    <div class="border rounded-full border-black w-10 aspect-square flex items-center justify-center shadow-[-2px_2px_0_black] group-hover:bg-lime-300 duration-500">
+                        <img src="images/send icon.png" alt="" class="w-5">
+                    </div>
+                </div>                
+            </div>
+        <div class="aspect-square rounded-lg relative cursor-pointer group overflow-hidden">
+            <!-- Video Element -->
+            <video autoplay muted loop class="w-full h-full object-cover">
+                <source src="/mrnewprt/agri-boost-connect (2).mp4 (2).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        
+            <!-- Overlay Content -->
+            <div class="bg-white absolute h-16 rounded-md py-4 px-6 -translate-x-1/2 flex duration-500 items-center justify-between bottom-5 left-1/2 w-11/12 group-hover:bottom-7">
+                <div class="flex flex-col leading-tight">
+                    <h3 class="font-semibold text-gray-700 text-base">AgriConnect</h3>
+                    <p class="text-sm text-gray-700">AI-Powered Agricultural Management Platform</p>
+                </div>  
+                <div class="border rounded-full border-black w-11 aspect-square flex items-center justify-center shadow-[-2px_2px_0_black] group-hover:bg-lime-300 duration-500">
+                    <img src="images/send icon.png" alt="" class="w-5">
+                </div>  
+            </div>
+            
+        </div>
+        <div class="aspect-square rounded-lg relative cursor-pointer group overflow-hidden">
+            <!-- Video Element -->
+            <video autoplay muted loop class="w-full h-full object-cover">
+                <source src="/mrnewprt/rem0te.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        
+            <!-- Overlay Content -->
+            <div class="bg-white absolute h-16 rounded-md py-4 px-6 -translate-x-1/2 flex duration-500 items-center justify-between bottom-5 left-1/2 w-11/12 group-hover:bottom-7">
+                <div class="flex flex-col leading-tight">
+                    <h3 class="font-semibold text-gray-700 text-base">RemoteWorkPro</h3>
+                    <p class="text-sm text-gray-700">A Task management platform for remote workers</p>
+                </div>  
+                <div class="border rounded-full border-black w-11 aspect-square flex items-center justify-center shadow-[-2px_2px_0_black] group-hover:bg-lime-300 duration-500">
+                    <img src="images/send icon.png" alt="" class="w-5">
+                </div>  
+            </div>
+            
+        </div>
+<div class="aspect-square rounded-lg relative cursor-pointer group overflow-hidden">
+    <!-- Video Element -->
+    <video autoplay muted loop class="w-full h-full object-cover">
+        <source src="/mrnewprt/enquireworld.com (1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay Content -->
+    <div class="bg-white absolute h-16 rounded-md py-4 px-6 -translate-x-1/2 flex duration-500 items-center justify-between bottom-5 left-1/2 w-11/12 group-hover:bottom-7">
+        <div class="flex flex-col leading-tight">
+            <h3 class="font-semibold text-gray-700 text-base">EnquireWorld</h3>
+            <p class="text-sm text-gray-700">Built an Ecommerce platform for EnquireWorld</p>
+        </div>  
+        <div class="border rounded-full border-black w-11 aspect-square flex items-center justify-center shadow-[-2px_2px_0_black] group-hover:bg-lime-300 duration-500">
+            <img src="images/send icon.png" alt="" class="w-5">
+        </div>  
+    </div>
+    
+</div>
+</div>
+<a href="#show more" class="w-max flex justify-center items-center gap-2 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-gray-400">Show more 
+    <img id="lightright" src="images/arrow-right.png" alt="" class="w-5 ">
+    <img id="darkright" src="images/arrow-right2.png" alt="" class="w-5 hidden">
+</a>
+</div>
+
+<!--------contact-------->
+   <div id="contact" class="w-full px-[12] py-10 scroll-mt-20 font-Ovo">
+    <h3 class="text-center mb-2 text-lg ">Connect with me!</h3>
+   <h1 class="text-center text-3xl mb-0"> Contact</h1>
+    <p class="w-full text-center justify-center mt-3"> I'd love to hear from you if you have any questions,comments, or feedback,  please don't hesitate to use the form below.</p>
+    <form method="POST" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto grid-cols-auto sm:py-3 px-4">
+        <input type="hidden" name="access_key" value="0557b6a3-b5b6-4c34-9962-6129c1b8c214">
+        <div class="flex flex-cols-2 gap-6 mb-8">
+            <input type="text" placeholder="Enter your name"  
+                   class="w-full p-3 rounded-md border border-gray-400 outline-none flex-1 mt-6 
+                          bg-white dark:bg-gray-700"
+                   style="color: black; background-color: white;" 
+                   onfocus="this.style.color = this.classList.contains('dark') ? 'white' : 'black';"
+                   onblur="this.style.color = this.classList.contains('dark') ? 'white' : 'black';" required name="name">
+            
+            <input type="email" placeholder="Enter your email"  
+                   class="w-full p-3 rounded-md border outline-none flex-1 mt-6 
+                          bg-white dark:bg-gray-700 border-gray-400"
+                   style="color: black; background-color: white;" 
+                   onfocus="this.style.color = this.classList.contains('dark') ? 'white' : 'black';"
+                   onblur="this.style.color = this.classList.contains('dark') ? 'white' : 'black';" required name="email">
+        </div>
+        
+        <textarea rows="6" placeholder="Enter your message" 
+                  class="w-full border-[0.5px] bg-white dark:bg-gray-700 border-gray-400 rounded-md p-4 outline-none mb-6"
+                  style="color: black; background-color: white;" 
+                  onfocus="this.style.color = this.classList.contains('dark') ? 'white' : 'black';"
+                  onblur="this.style.color = this.classList.contains('dark') ? 'white' : 'black';" required name="message">
+        </textarea>
+        
+        <button class="flex w-max mx-auto border border-gray-700 justify-between items-center rounded-md gap-2 py-2 px-3 bg-black text-white hover:bg-green-950 transition">
+            Submit now <img src="images/arrow-right2.png" alt="" class="w-5">
+        </button>
+    </form>
+    
+    
+
+</div>
+
+
+<!-------------footer------------->
+
+<div class="mt-20">
+
+    <div class="w-full mb-30 font-Ovo pt-1">
+
+        <img id="lightLogo2" src="images/lgo2.png" alt="" class="w-28 mx-auto">
+        <img id="darkLogo2" src="images/lgo3.png" alt="" class="w-28 mx-auto hidden">
+        <a href="#mail" class=" w-full mx-auto gap-2 my-2 flex items-center justify-center"> <img id="lightemail" src="images/email icon.png" alt="" class="w-6"> <img id="darkemail" src="images/email.png" class="w-6">michealadejimi07@gmail.com</a>
+    </div>
+</div>
+   <div class="flex flex-col sm:flex-row text-center items-center justify-between mt-12 border-t border-gray-500 mx-[10%] py-6">
+    <p>© 2024 Micheal Adejimi. All rights reserved.</p>
+    <ul class="flex gap-10 justify-center items-center mt-4 sm:mt-0">
+        <li><a href="https://github.com/michealslife01">Github</a></li>
+        <li><a href="www.linkedin.com/in/freebie-central-76a260261">LinkedIn</a></li>
+        <li><a href="https://twitter.com/lifewithhe">Twitter</a></li>
+    </ul>
+</div>
+
+
+ 
+
+<script src="script.js" ></script>
+</body>
+</html>
